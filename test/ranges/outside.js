@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const outside = require('../../ranges/outside')
+const outside = require('../../lib/ranges/outside')
 const versionGtr = require('../fixtures/version-gt-range')
 const versionNotGtr = require('../fixtures/version-not-gt-range')
 const versionLtr = require('../fixtures/version-lt-range')

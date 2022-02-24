@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const Comparator = require('../../classes/comparator')
+const Comparator = require('../../lib/classes/comparator')
 const comparatorIntersection = require('../fixtures/comparator-intersection.js')
 
 test('comparator testing', t => {

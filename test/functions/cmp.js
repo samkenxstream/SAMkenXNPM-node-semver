@@ -1,8 +1,8 @@
 const { test } = require('tap')
-const cmp = require('../../functions/cmp')
+const cmp = require('../../lib/functions/cmp')
 const comparisons = require('../fixtures/comparisons.js')
 const equality = require('../fixtures/equality.js')
-const SemVer = require('../../classes/semver')
+const SemVer = require('../../lib/classes/semver')
 
 test('invalid cmp usage', (t) => {
   t.throws(() => {

@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const minSatisfying = require('../../ranges/min-satisfying')
+const minSatisfying = require('../../lib/ranges/min-satisfying')
 
 test('min satisfying', (t) => {
   [[['1.2.3', '1.2.4'], '1.2', '1.2.3'],

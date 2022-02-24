@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const rsort = require('../../functions/rsort')
+const rsort = require('../../lib/functions/rsort')
 
 test('sorting', (t) => {
   const list = [

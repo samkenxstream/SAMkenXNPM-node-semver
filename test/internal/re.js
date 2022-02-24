@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const { src, re } = require('../../internal/re')
+const { src, re } = require('../../lib/internal/re')
 const semver = require('../../')
 
 test('has a list of src, re, and tokens', (t) => {

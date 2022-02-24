@@ -1,6 +1,6 @@
 const t = require('tap')
-const subset = require('../../ranges/subset.js')
-const Range = require('../../classes/range')
+const subset = require('../../lib/ranges/subset.js')
+const Range = require('../../lib/classes/range')
 
 // sub, dom, expect, [options]
 const cases = [

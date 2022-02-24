@@ -1,6 +1,6 @@
 const { test } = require('tap')
-const Range = require('../../classes/range')
-const Comparator = require('../../classes/comparator')
+const Range = require('../../lib/classes/range')
+const Comparator = require('../../lib/classes/comparator')
 const rangeIntersection = require('../fixtures/range-intersection.js')
 
 const rangeInclude = require('../fixtures/range-include.js')

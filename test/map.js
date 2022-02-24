@@ -1,31 +1,34 @@
 const t = require('tap')
-
-// ensure that the coverage map maps all coverage
-const ignore = ['.git', '.github', 'node_modules', 'coverage', 'tap-snapshots', 'test', 'fixtures']
+const { resolve, join, relative } = require('path')
 const { statSync, readdirSync } = require('fs')
-const find = (folder, set = [], root = true) => {
-  const ent = readdirSync(folder)
-  set.push(...ent.filter(f => /\.m?js$/.test(f)).map(f => folder + '/' + f))
-  for (const f of ent.filter(f => !ignore.includes(f) && !/\.m?js$/.test(f))) {
-    if (statSync(folder + '/' + f).isDirectory()) {
-      find(folder + '/' + f, set, false)
-    }
-  }
-  if (!root) {
-    return
-  }
-  return set.map(f => f.substr(folder.length + 1)
-    .replace(/\\/g, '/'))
-    .sort((a, b) => a.localeCompare(b))
-}
+const map = require('../map.js')
 
-const { resolve } = require('path')
 const root = resolve(__dirname, '..')
 
-const sut = find(root)
-const tests = find(root + '/test')
+const find = (folder, ignores = [], set = [], isRoot = true) => {
+  const ent = readdirSync(folder)
+  set.push(...ent.filter(f => /\.m?js$/.test(f)).map(f => join(folder, f)))
+  for (const f of ent.filter(f => !ignores.includes(f) && !/\.m?js$/.test(f))) {
+    if (statSync(join(folder, f)).isDirectory()) {
+      find(join(folder, f), ignores, set, false)
+    }
+  }
+  if (!isRoot) {
+    return
+  }
+  return set
+}
+
+const normalize = (arr, dir) => arr
+  .map(f => relative(root, f).replace(/\\/g, '/').replace(dir, ''))
+  .sort((a, b) => a.localeCompare(b))
+
+const sutLib = find(join(root, 'lib'))
+const sutBin = find(join(root, 'bin'))
+const sut = normalize(['map.js', ...sutLib, ...sutBin], 'lib/')
+const tests = normalize(find(join(root, 'test'), ['fixtures']), 'test/')
+
 t.strictSame(sut, tests, 'test files should match system files')
-const map = require('../map.js')
 
 for (const testFile of tests) {
   t.test(testFile, t => {

@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const maxSatisfying = require('../../ranges/max-satisfying')
+const maxSatisfying = require('../../lib/ranges/max-satisfying')
 
 test('max satisfying', (t) => {
   [[['1.2.3', '1.2.4'], '1.2', '1.2.4'],

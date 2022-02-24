@@ -1,6 +1,6 @@
 const { test } = require('tap')
-const SemVer = require('../../classes/semver')
-const compareBuild = require('../../functions/compare-build')
+const SemVer = require('../../lib/classes/semver')
+const compareBuild = require('../../lib/functions/compare-build')
 
 test('compareBuild', (t) => {
   const noBuild = '1.0.0'

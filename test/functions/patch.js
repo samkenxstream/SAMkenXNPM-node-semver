@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const patch = require('../../functions/patch')
+const patch = require('../../lib/functions/patch')
 
 test('patch tests', (t) => {
   // [range, version]

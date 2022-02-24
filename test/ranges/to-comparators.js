@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const toComparators = require('../../ranges/to-comparators')
+const toComparators = require('../../lib/ranges/to-comparators')
 
 test('comparators test', (t) => {
   // [range, comparators]

@@ -36,50 +36,50 @@ const semver = require('semver')
 // all of them listed here, just pick and choose what you want
 
 // classes
-const SemVer = require('semver/classes/semver')
-const Comparator = require('semver/classes/comparator')
-const Range = require('semver/classes/range')
+const SemVer = require('semver/lib/classes/semver')
+const Comparator = require('semver/lib/classes/comparator')
+const Range = require('semver/lib/classes/range')
 
 // functions for working with versions
-const semverParse = require('semver/functions/parse')
-const semverValid = require('semver/functions/valid')
-const semverClean = require('semver/functions/clean')
-const semverInc = require('semver/functions/inc')
-const semverDiff = require('semver/functions/diff')
-const semverMajor = require('semver/functions/major')
-const semverMinor = require('semver/functions/minor')
-const semverPatch = require('semver/functions/patch')
-const semverPrerelease = require('semver/functions/prerelease')
-const semverCompare = require('semver/functions/compare')
-const semverRcompare = require('semver/functions/rcompare')
-const semverCompareLoose = require('semver/functions/compare-loose')
-const semverCompareBuild = require('semver/functions/compare-build')
-const semverSort = require('semver/functions/sort')
-const semverRsort = require('semver/functions/rsort')
+const semverParse = require('semver/lib/functions/parse')
+const semverValid = require('semver/lib/functions/valid')
+const semverClean = require('semver/lib/functions/clean')
+const semverInc = require('semver/lib/functions/inc')
+const semverDiff = require('semver/lib/functions/diff')
+const semverMajor = require('semver/lib/functions/major')
+const semverMinor = require('semver/lib/functions/minor')
+const semverPatch = require('semver/lib/functions/patch')
+const semverPrerelease = require('semver/lib/functions/prerelease')
+const semverCompare = require('semver/lib/functions/compare')
+const semverRcompare = require('semver/lib/functions/rcompare')
+const semverCompareLoose = require('semver/lib/functions/compare-loose')
+const semverCompareBuild = require('semver/lib/functions/compare-build')
+const semverSort = require('semver/lib/functions/sort')
+const semverRsort = require('semver/lib/functions/rsort')
 
 // low-level comparators between versions
-const semverGt = require('semver/functions/gt')
-const semverLt = require('semver/functions/lt')
-const semverEq = require('semver/functions/eq')
-const semverNeq = require('semver/functions/neq')
-const semverGte = require('semver/functions/gte')
-const semverLte = require('semver/functions/lte')
-const semverCmp = require('semver/functions/cmp')
-const semverCoerce = require('semver/functions/coerce')
+const semverGt = require('semver/lib/functions/gt')
+const semverLt = require('semver/lib/functions/lt')
+const semverEq = require('semver/lib/functions/eq')
+const semverNeq = require('semver/lib/functions/neq')
+const semverGte = require('semver/lib/functions/gte')
+const semverLte = require('semver/lib/functions/lte')
+const semverCmp = require('semver/lib/functions/cmp')
+const semverCoerce = require('semver/lib/functions/coerce')
 
 // working with ranges
-const semverSatisfies = require('semver/functions/satisfies')
-const semverMaxSatisfying = require('semver/ranges/max-satisfying')
-const semverMinSatisfying = require('semver/ranges/min-satisfying')
-const semverToComparators = require('semver/ranges/to-comparators')
-const semverMinVersion = require('semver/ranges/min-version')
-const semverValidRange = require('semver/ranges/valid')
-const semverOutside = require('semver/ranges/outside')
-const semverGtr = require('semver/ranges/gtr')
-const semverLtr = require('semver/ranges/ltr')
-const semverIntersects = require('semver/ranges/intersects')
-const simplifyRange = require('semver/ranges/simplify')
-const rangeSubset = require('semver/ranges/subset')
+const semverSatisfies = require('semver/lib/functions/satisfies')
+const semverMaxSatisfying = require('semver/lib/ranges/max-satisfying')
+const semverMinSatisfying = require('semver/lib/ranges/min-satisfying')
+const semverToComparators = require('semver/lib/ranges/to-comparators')
+const semverMinVersion = require('semver/lib/ranges/min-version')
+const semverValidRange = require('semver/lib/ranges/valid')
+const semverOutside = require('semver/lib/ranges/outside')
+const semverGtr = require('semver/lib/ranges/gtr')
+const semverLtr = require('semver/lib/ranges/ltr')
+const semverIntersects = require('semver/lib/ranges/intersects')
+const simplifyRange = require('semver/lib/ranges/simplify')
+const rangeSubset = require('semver/lib/ranges/subset')
 ```
 
 As a command-line utility:
@@ -529,40 +529,40 @@ of the API that are used.
 The following modules are available:
 
 * `require('semver')`
-* `require('semver/classes')`
-* `require('semver/classes/comparator')`
-* `require('semver/classes/range')`
-* `require('semver/classes/semver')`
-* `require('semver/functions/clean')`
-* `require('semver/functions/cmp')`
-* `require('semver/functions/coerce')`
-* `require('semver/functions/compare')`
-* `require('semver/functions/compare-build')`
-* `require('semver/functions/compare-loose')`
-* `require('semver/functions/diff')`
-* `require('semver/functions/eq')`
-* `require('semver/functions/gt')`
-* `require('semver/functions/gte')`
-* `require('semver/functions/inc')`
-* `require('semver/functions/lt')`
-* `require('semver/functions/lte')`
-* `require('semver/functions/major')`
-* `require('semver/functions/minor')`
-* `require('semver/functions/neq')`
-* `require('semver/functions/parse')`
-* `require('semver/functions/patch')`
-* `require('semver/functions/prerelease')`
-* `require('semver/functions/rcompare')`
-* `require('semver/functions/rsort')`
-* `require('semver/functions/satisfies')`
-* `require('semver/functions/sort')`
-* `require('semver/functions/valid')`
-* `require('semver/ranges/gtr')`
-* `require('semver/ranges/intersects')`
-* `require('semver/ranges/ltr')`
-* `require('semver/ranges/max-satisfying')`
-* `require('semver/ranges/min-satisfying')`
-* `require('semver/ranges/min-version')`
-* `require('semver/ranges/outside')`
-* `require('semver/ranges/to-comparators')`
-* `require('semver/ranges/valid')`
+* `require('semver/lib/classes')`
+* `require('semver/lib/classes/comparator')`
+* `require('semver/lib/classes/range')`
+* `require('semver/lib/classes/semver')`
+* `require('semver/lib/functions/clean')`
+* `require('semver/lib/functions/cmp')`
+* `require('semver/lib/functions/coerce')`
+* `require('semver/lib/functions/compare')`
+* `require('semver/lib/functions/compare-build')`
+* `require('semver/lib/functions/compare-loose')`
+* `require('semver/lib/functions/diff')`
+* `require('semver/lib/functions/eq')`
+* `require('semver/lib/functions/gt')`
+* `require('semver/lib/functions/gte')`
+* `require('semver/lib/functions/inc')`
+* `require('semver/lib/functions/lt')`
+* `require('semver/lib/functions/lte')`
+* `require('semver/lib/functions/major')`
+* `require('semver/lib/functions/minor')`
+* `require('semver/lib/functions/neq')`
+* `require('semver/lib/functions/parse')`
+* `require('semver/lib/functions/patch')`
+* `require('semver/lib/functions/prerelease')`
+* `require('semver/lib/functions/rcompare')`
+* `require('semver/lib/functions/rsort')`
+* `require('semver/lib/functions/satisfies')`
+* `require('semver/lib/functions/sort')`
+* `require('semver/lib/functions/valid')`
+* `require('semver/lib/ranges/gtr')`
+* `require('semver/lib/ranges/intersects')`
+* `require('semver/lib/ranges/ltr')`
+* `require('semver/lib/ranges/max-satisfying')`
+* `require('semver/lib/ranges/min-satisfying')`
+* `require('semver/lib/ranges/min-version')`
+* `require('semver/lib/ranges/outside')`
+* `require('semver/lib/ranges/to-comparators')`
+* `require('semver/lib/ranges/valid')`

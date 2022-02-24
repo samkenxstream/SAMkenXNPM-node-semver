@@ -1,6 +1,6 @@
 const t = require('tap')
-const parse = require('../../functions/parse')
-const SemVer = require('../../classes/semver')
+const parse = require('../../lib/functions/parse')
+const SemVer = require('../../lib/classes/semver')
 const invalidVersions = require('../fixtures/invalid-versions')
 
 t.test('returns null instead of throwing when presented with garbage', t => {

@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const gtr = require('../../ranges/gtr')
+const gtr = require('../../lib/ranges/gtr')
 const versionGtr = require('../fixtures/version-gt-range')
 const versionNotGtr = require('../fixtures/version-not-gt-range')
 

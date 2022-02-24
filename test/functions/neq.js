@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const neq = require('../../functions/neq')
+const neq = require('../../lib/functions/neq')
 const comparisons = require('../fixtures/comparisons.js')
 const equality = require('../fixtures/equality.js')
 

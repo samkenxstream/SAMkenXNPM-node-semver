@@ -2,7 +2,7 @@
   "name": "semver",
   "version": "7.3.5",
   "description": "The semantic version parser used by npm.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "tap",
     "snap": "tap",

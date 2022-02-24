@@ -1,5 +1,5 @@
 const { test } = require('tap')
-const satisfies = require('../../functions/satisfies')
+const satisfies = require('../../lib/functions/satisfies')
 const rangeInclude = require('../fixtures/range-include.js')
 const rangeExclude = require('../fixtures/range-exclude.js')
 test('range tests', t => {

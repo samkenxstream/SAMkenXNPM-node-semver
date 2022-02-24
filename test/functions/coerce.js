@@ -1,7 +1,7 @@
 const { test } = require('tap')
-const coerce = require('../../functions/coerce')
-const parse = require('../../functions/parse')
-const valid = require('../../functions/valid')
+const coerce = require('../../lib/functions/coerce')
+const parse = require('../../lib/functions/parse')
+const valid = require('../../lib/functions/valid')
 
 test('coerce tests', (t) => {
   // Expected to be null (cannot be coerced).
@@ -119,5 +119,5 @@ test('coerce tests', (t) => {
   t.same(valid(coerce('42.6.7.9.3-alpha')), '42.6.7')
   t.same(valid(coerce('v2')), '2.0.0')
 
-  t.done()
+  t.end()
 })
