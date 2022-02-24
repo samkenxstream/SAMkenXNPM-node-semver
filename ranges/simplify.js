@@ -12,8 +12,9 @@ module.exports = (versions, range, options) => {
     const included = satisfies(version, range, options)
     if (included) {
       prev = version
-      if (!min)
+      if (!min) {
         min = version
+      }
     } else {
       if (prev) {
         set.push([min, prev])
@@ -22,21 +23,23 @@ module.exports = (versions, range, options) => {
       min = null
     }
   }
-  if (min)
+  if (min) {
     set.push([min, null])
+  }
 
   const ranges = []
   for (const [min, max] of set) {
-    if (min === max)
+    if (min === max) {
       ranges.push(min)
-    else if (!max && min === v[0])
+    } else if (!max && min === v[0]) {
       ranges.push('*')
-    else if (!max)
+    } else if (!max) {
       ranges.push(`>=${min}`)
-    else if (min === v[0])
+    } else if (min === v[0]) {
       ranges.push(`<=${max}`)
-    else
+    } else {
       ranges.push(`${min} - ${max}`)
+    }
   }
   const simplified = ranges.join(' || ')
   const original = typeof range.raw === 'string' ? range.raw : String(range)
