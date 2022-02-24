@@ -1,5 +1,4 @@
 const { test } = require('tap')
-const SemVer = require('../../lib/classes/semver')
 const compareBuild = require('../../lib/functions/compare-build')
 
 test('compareBuild', (t) => {
