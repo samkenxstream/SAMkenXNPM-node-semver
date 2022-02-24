@@ -1,4 +1,4 @@
-# changes log
+# CHANGELOG
 
 ## 7.3.0
 
