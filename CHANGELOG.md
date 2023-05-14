@@ -1,5 +1,44 @@
 # Changelog
 
+## [7.5.1](https://github.com/npm/node-semver/compare/v7.5.0...v7.5.1) (2023-05-12)
+
+### Bug Fixes
+
+* [`d30d25a`](https://github.com/npm/node-semver/commit/d30d25a5c1fb963c3cc9178cb1769fe45e4a3cab) [#559](https://github.com/npm/node-semver/pull/559) show type on invalid semver error (#559) (@tjenkinson)
+
+## [7.5.0](https://github.com/npm/node-semver/compare/v7.4.0...v7.5.0) (2023-04-17)
+
+### Features
+
+* [`503a4e5`](https://github.com/npm/node-semver/commit/503a4e52fe2b1c6ed1400d33149f7733c8361eed) [#548](https://github.com/npm/node-semver/pull/548) allow identifierBase to be false (#548) (@lsvalina)
+
+### Bug Fixes
+
+* [`e219bb4`](https://github.com/npm/node-semver/commit/e219bb454036a0c23e34407591f921c8edb688e7) [#552](https://github.com/npm/node-semver/pull/552) throw on bad version with correct error message (#552) (@wraithgar)
+* [`fc2f3df`](https://github.com/npm/node-semver/commit/fc2f3df0b5d25253b3580607e111a9a280d888ca) [#546](https://github.com/npm/node-semver/pull/546) incorrect results from diff sometimes with prerelease versions (#546) (@tjenkinson)
+* [`2781767`](https://github.com/npm/node-semver/commit/27817677794f592b592bf6181a80a4824ff762b2) [#547](https://github.com/npm/node-semver/pull/547) avoid re-instantiating SemVer during diff compare (#547) (@macno)
+
+## [7.4.0](https://github.com/npm/node-semver/compare/v7.3.8...v7.4.0) (2023-04-10)
+
+### Features
+
+* [`113f513`](https://github.com/npm/node-semver/commit/113f51312a1a6b6aa50d4f9486b4fde21782c1f5) [#532](https://github.com/npm/node-semver/pull/532) identifierBase parameter for .inc (#532) (@wraithgar, @b-bly)
+* [`48d8f8f`](https://github.com/npm/node-semver/commit/48d8f8fa63bf6e35db70ff840b6da1a51596a5a8) [#530](https://github.com/npm/node-semver/pull/530) export new RELEASE_TYPES constant (@hcharley)
+
+### Bug Fixes
+
+* [`940723d`](https://github.com/npm/node-semver/commit/940723d22bca824993627c45ac30dd3d2854b8cd) [#538](https://github.com/npm/node-semver/pull/538) intersects with v0.0.0 and v0.0.0-0 (#538) (@wraithgar)
+* [`aa516b5`](https://github.com/npm/node-semver/commit/aa516b50b32f5a144017d8fc1b9efe0540963c91) [#535](https://github.com/npm/node-semver/pull/535) faster parse options (#535) (@H4ad)
+* [`61e6ea1`](https://github.com/npm/node-semver/commit/61e6ea1e9b7af01baf19ab0c0a63c8e3ebfac97c) [#536](https://github.com/npm/node-semver/pull/536) faster cache key factory for range (#536) (@H4ad)
+* [`f8b8b61`](https://github.com/npm/node-semver/commit/f8b8b619e71746a47852a9d301f3087ab311444f) [#541](https://github.com/npm/node-semver/pull/541) optimistic parse (#541) (@H4ad)
+* [`796cbe2`](https://github.com/npm/node-semver/commit/796cbe29b06d102e1b16f3ed78eaba210ece951e) [#533](https://github.com/npm/node-semver/pull/533) semver.diff prerelease to release recognition (#533) (@wraithgar, @dominique-blockchain)
+* [`3f222b1`](https://github.com/npm/node-semver/commit/3f222b144033525ca9f8a2ce5bc6e02f0401881f) [#537](https://github.com/npm/node-semver/pull/537) reuse comparators on subset (#537) (@H4ad)
+* [`f66cc45`](https://github.com/npm/node-semver/commit/f66cc45c6e82eebb4b5b51af73e7b8dcaeda7e21) [#539](https://github.com/npm/node-semver/pull/539) faster diff (#539) (@H4ad)
+
+### Documentation
+
+* [`c5d29df`](https://github.com/npm/node-semver/commit/c5d29df6f75741fea27fffe3b88c9c3b28e3ca73) [#530](https://github.com/npm/node-semver/pull/530) Add "Constants" section to README (@hcharley)
+
 ## [7.3.8](https://github.com/npm/node-semver/compare/v7.3.7...v7.3.8) (2022-10-04)
 
 ### Bug Fixes

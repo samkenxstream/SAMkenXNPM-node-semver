@@ -93,6 +93,11 @@ Object {
     --ltr
             Coerce version strings left to right (default)
     
+    -n <base>
+            Base number to be used for the prerelease identifier.
+            Can be either 0 or 1, or false to omit the number altogether.
+            Defaults to 0.
+    
     Program exits successfully if any valid version satisfies
     all supplied ranges, and prints all satisfying versions.
     
@@ -148,6 +153,11 @@ Object {
     
     --ltr
             Coerce version strings left to right (default)
+    
+    -n <base>
+            Base number to be used for the prerelease identifier.
+            Can be either 0 or 1, or false to omit the number altogether.
+            Defaults to 0.
     
     Program exits successfully if any valid version satisfies
     all supplied ranges, and prints all satisfying versions.
@@ -205,6 +215,11 @@ Object {
     --ltr
             Coerce version strings left to right (default)
     
+    -n <base>
+            Base number to be used for the prerelease identifier.
+            Can be either 0 or 1, or false to omit the number altogether.
+            Defaults to 0.
+    
     Program exits successfully if any valid version satisfies
     all supplied ranges, and prints all satisfying versions.
     
@@ -261,6 +276,11 @@ Object {
     --ltr
             Coerce version strings left to right (default)
     
+    -n <base>
+            Base number to be used for the prerelease identifier.
+            Can be either 0 or 1, or false to omit the number altogether.
+            Defaults to 0.
+    
     Program exits successfully if any valid version satisfies
     all supplied ranges, and prints all satisfying versions.
     
@@ -297,6 +317,24 @@ Object {
   "code": 1,
   "err": "--inc can only be used on a single version with no range\\n",
   "out": "",
+  "signal": null,
+}
+`
+
+exports[`test/bin/semver.js TAP inc tests > -i premajor 1.0.0 --preid=beta -n 1 1`] = `
+Object {
+  "code": 0,
+  "err": "",
+  "out": "2.0.0-beta.1\\n",
+  "signal": null,
+}
+`
+
+exports[`test/bin/semver.js TAP inc tests > -i premajor 1.0.0 --preid=beta -n false 1`] = `
+Object {
+  "code": 0,
+  "err": "",
+  "out": "2.0.0-beta\\n",
   "signal": null,
 }
 `
